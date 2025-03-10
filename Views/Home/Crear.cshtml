@@ -1,0 +1,61 @@
+﻿@model Udemy.Models.Contacto
+@{
+    ViewData["Title"] = "Crear Nuevo Contacto";
+}
+<!--Titulo Principal -->
+<h1 class="text-center">Contactos con .Net 8 (Core MVC)</h1>
+
+<!--Columna Principal -->
+<div class="row">
+    <div class="offset-12 ">
+        <div class="card border"> <!--Tarjeta con borde-->
+            <div class="card-header bg-dark" > <!--Titulo Principal de la tarjeta con un color negro -->
+                <h3 class="text-white"><strong>Creare Nuevo Usuario</strong></h3> <!--texto de la tarjeta -->
+            </div>
+            <div class="card-body"><!--Cuerpo de la tarjeta donde esta todo el contenido -->
+                <form asp-action="Crear" method="post"> <!--Formulario con su metodo de envio post y su funcion -->
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div> <!--Me valida los capo de las instancia -->
+                    <!--Campo para ingresar el Nombre -->
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" placeholder=" Ingresa el Nombre" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+
+
+                    <!--Campo para ingresar el Telefono -->
+                    <div class="form-group">
+                        <label asp-for="Telefono" class="control-label"></label>
+                        <input asp-for="Telefono" class="form-control" placeholder=" Ingresa el Telefono" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+
+
+                    <!--Campo para ingresar el Celular -->
+                    <div class="form-group">
+                        <label asp-for="Celular" class="control-label"></label>
+                        <input asp-for="Celular" class="form-control" placeholder=" Ingresa el Celular" />
+                        <span asp-validation-for="Celular" class="text-danger"></span>
+                    </div>
+
+
+                    <!--Campo para ingresar el Email -->
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" placeholder=" Ingresa el Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <!--Boton para enviar formulario-->
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-secondary d-block mx-auto"><i class="fa fa-user" aria-hidden="true"> Crear Usuario </i></button>
+                    </div>
+
+                </form>
+               
+                <a asp-controller="Home" asp-action="index">Volver</a> <!--Boton para volver al inicio-->
+
+            </div>
+
+        </div>
+    </div>
+</div>

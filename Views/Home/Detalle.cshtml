@@ -1,0 +1,33 @@
+﻿@model Udemy.Models.Contacto
+@{
+    ViewData["Title"] = "Detalle Contacto";
+}
+<!--Titulo Principal -->
+<h1 class="text-center">Contactos con .Net 8 (Core MVC)</h1>
+
+<!--Columna Principal -->
+<div class="row">
+    <div class="offset-12 ">
+        <div class="card border">
+            <!--Tarjeta con borde-->
+            <div class="card-header bg-dark">
+                <!--Titulo Principal de la tarjeta con un color negro -->
+                <h3 class="text-white"><strong>Editar Usuario</strong></h3> <!--texto de la tarjeta -->
+            </div>
+            <div class="card-body">
+
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Nombre: @Html.DisplayFor(m => m.Nombre)</strong></li>
+                    <li class="list-group-item"><strong>Teléfono: @Html.DisplayFor(m => m.Telefono)</strong></li>
+                    <li class="list-group-item"><strong>Celular: @Html.DisplayFor(m => m.Celular)</strong></li>
+                    <li class="list-group-item"><strong>Email: @Html.DisplayFor(m => m.Email)</strong></li>
+                    <li class="list-group-item"><strong>Fecha: @Html.DisplayFor(m => m.FechaDeCreacion)</strong></li>
+                </ul>
+
+                <a asp-controller="Home" asp-action="index">Volver</a> <!--Boton para volver al inicio-->
+
+            </div>
+
+        </div>
+    </div>
+</div>
